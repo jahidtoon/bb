@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBrain - PWA Icons Setup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #9c42f5;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #5d7bf7;
+            margin-top: 30px;
+        }
+        .icon-requirements {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #2d2d2d;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+        .file-item {
+            margin-bottom: 10px;
+        }
+        .filename {
+            font-weight: bold;
+            color: #5d7bf7;
+        }
+        .dimensions {
+            color: #aaa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #1e1e1e;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #9c42f5 0%, #5d7bf7 100%);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>ByteBrain - PWA Icons Setup</h1>
+    
+    <p>
+        According to the website_notes.md documentation, your ByteBrain application should have Progressive Web App (PWA) functionality.
+        However, the required icon files are missing. This page provides instructions to create or upload these files.
+    </p>
+    
+    <div class="icon-requirements">
+        <h2>Required Icon Files</h2>
+        <p>The following files should be created and placed in the <code>assets/images/</code> directory:</p>
+        
+        <table>
+            <tr>
+                <th>Filename</th>
+                <th>Dimensions</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>icon-192x192.png</td>
+                <td>192×192 pixels</td>
+                <td>App icon for smaller displays</td>
+            </tr>
+            <tr>
+                <td>icon-512x512.png</td>
+                <td>512×512 pixels</td>
+                <td>App icon for larger displays</td>
+            </tr>
+            <tr>
+                <td>gallery-icon.png</td>
+                <td>192×192 pixels</td>
+                <td>Shortcut icon for the gallery feature</td>
+            </tr>
+            <tr>
+                <td>profile-icon.png</td>
+                <td>192×192 pixels</td>
+                <td>Shortcut icon for the user profile</td>
+            </tr>
+        </table>
+    </div>
+    
+    <h2>Option 1: Create Icons Manually</h2>
+    <p>
+        You can create these icons using any image editing software like Photoshop, GIMP, or an online icon generator.
+        The icons should follow your brand guidelines and use a consistent style.
+    </p>
+    <p>
+        For ByteBrain, we recommend using a purple gradient similar to the theme color (#9c42f5) with a clean, modern design.
+    </p>
+    
+    <h2>Option 2: Use an Online PWA Icon Generator</h2>
+    <p>
+        Several free online tools can generate a complete set of PWA icons:
+    </p>
+    <ul>
+        <li><a href="https://www.pwabuilder.com/imageGenerator" target="_blank" style="color: #5d7bf7;">PWA Builder Image Generator</a></li>
+        <li><a href="https://app-manifest.firebaseapp.com/" target="_blank" style="color: #5d7bf7;">Web App Manifest Generator</a></li>
+        <li><a href="https://realfavicongenerator.net/" target="_blank" style="color: #5d7bf7;">Real Favicon Generator</a></li>
+    </ul>
+    
+    <h2>Icon Design Guidelines</h2>
+    <p>For consistency, your icons should:</p>
+    <ul>
+        <li>Use a consistent style across all sizes</li>
+        <li>Include padding around the edges (about 10% of the width/height)</li>
+        <li>Use the primary theme color (#9c42f5) or gradient</li>
+        <li>Have transparent backgrounds (PNG format)</li>
+        <li>Be optimized for file size</li>
+    </ul>
+    
+    <h2>Once Your Icons Are Ready</h2>
+    <p>
+        After creating or generating your icons:
+    </p>
+    <ol>
+        <li>Place all icon files in the <code>assets/images/</code> directory</li>
+        <li>Test your PWA by accessing the site in a modern browser</li>
+        <li>Verify that the "Add to Home Screen" option shows your icons correctly</li>
+    </ol>
+    
+    <p>
+        The manifest.json file is already configured to use these icon paths, so once the files exist,
+        the PWA functionality should work automatically.
+    </p>
+    
+    <a href="index.php" class="btn">Return to Homepage</a>
+</body>
+</html> 

@@ -1,0 +1,53 @@
+# Guide: Updating All PHP Pages for Mobile App Experience
+
+To update all PHP pages in your ByteBrain project to support the mobile app experience, follow these steps for each page:
+
+## 1. Add Meta Tags to Header
+
+In the `<head>` section of each PHP file, update or add these tags:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#9c42f5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="/bb/manifest.json">
+<link rel="apple-touch-icon" href="/bb/images/icon-192x192.png">
+```
+
+Note: For pages in subdirectories like `user/` or `admin/`, adjust the paths to manifest.json and icons with the proper relative path.
+
+## 2. Add Mobile Script Reference
+
+Before the closing `</body>` tag in each file, add:
+
+```html
+<script src="/bb/assets/js/mobile-app.js"></script>
+```
+
+Adjust the path as needed for pages in subdirectories.
+
+## 3. Key Files Updated So Far
+
+- ✅ index.php
+- ✅ user/profile.php
+
+## 4. Files That Still Need Updates
+
+Main pages:
+- api.php (if it has HTML output)
+- user/login.php
+- user/history.php
+- user/logout.php (if it has HTML output)
+- admin/index.php
+- admin/login.php
+- admin/users.php
+- [And any other pages with HTML output]
+
+## 5. Testing
+
+After updating each page, test on a mobile device to ensure:
+- The navigation bar hides when scrolling down
+- The bottom navigation appears on mobile screens
+- Content adjusts properly for the mobile experience
+- Status bar appears properly (especially on iOS) 

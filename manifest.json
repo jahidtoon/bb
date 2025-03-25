@@ -1,0 +1,40 @@
+{
+  "name": "ByteBrain AI Generator",
+  "short_name": "ByteBrain",
+  "description": "AI-powered content generation platform",
+  "start_url": "/bb/index.php",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#9c42f5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Gallery",
+      "short_name": "Gallery",
+      "description": "View your generated content",
+      "url": "./user/history.php",
+      "icons": [{ "src": "images/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Profile",
+      "short_name": "Profile",
+      "description": "Manage your ByteBrain profile",
+      "url": "./user/profile.php",
+      "icons": [{ "src": "images/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+} 

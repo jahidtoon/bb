@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBrain - Offline</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(90deg, #9c42f5 0%, #5d7bf7 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .offline-container {
+            background-color: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        p {
+            margin: 20px 0;
+            line-height: 1.7;
+        }
+        .icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #9c42f5 0%, #5d7bf7 100%);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(156, 66, 245, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(156, 66, 245, 0.6);
+        }
+        .additional-content {
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+        .feature-list {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="icon">📡</div>
+        <h1>You're Offline</h1>
+        <p>
+            Sorry, it seems you're currently offline and we can't load the requested page.
+            ByteBrain needs an internet connection to generate AI content.
+        </p>
+        <p>
+            You can still access previously viewed pages and your generation history that
+            were cached during your last online session.
+        </p>
+        <button class="btn" id="retry-button">Try Again</button>
+        
+        <div class="additional-content">
+            <p>While you're offline, you can still access:</p>
+            <ul class="feature-list">
+                <li>Your previously viewed generated images</li>
+                <li>Cached workflow information</li>
+                <li>Your user profile details</li>
+            </ul>
+            <p>Any new generation requests will be queued and processed once you're back online.</p>
+        </div>
+    </div>
+
+    <script>
+        // When retry button is clicked, attempt to reload the page
+        document.getElementById('retry-button').addEventListener('click', function() {
+            window.location.reload();
+        });
+
+        // Listen for online status change
+        window.addEventListener('online', function() {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html> 
